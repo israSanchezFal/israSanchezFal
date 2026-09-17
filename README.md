@@ -46,15 +46,3 @@ Currently exploring how to turn structured data into useful applications, one pr
   <img src="./assets/stack/git.svg" alt="Git" title="Git" width="32" height="32" />
   <img src="./assets/stack/github.svg" alt="GitHub" title="GitHub" width="32" height="32" />
 </p>
-
-### GitHub stats
-
-<a href="https://github.com/israSanchezFal?tab=overview">
-  <img src="./assets/github-stats.svg" alt="GitHub statistics: contributions and active days over the last year, and public original repositories" width="100%" />
-</a>
-
-### Activity graph
-
-<a href="https://github.com/israSanchezFal?tab=overview">
-  <img src="./assets/github-activity.svg" alt="Weekly GitHub contributions over the last year" width="100%" />
-</a>
