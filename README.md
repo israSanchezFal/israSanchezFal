@@ -31,11 +31,21 @@ Currently exploring how to turn structured data into useful applications, one pr
 
 ### Tech stack
 
-`Java` · `TypeScript` · `Python` · `React` · `FastAPI`
-
-`PostgreSQL` · `MongoDB` · `Cassandra` · `Supabase` · `SQLAlchemy`
-
-`Docker` · `Git` · `GitHub`
+<p>
+  <img src="./assets/stack/java.svg" alt="Java" title="Java" width="32" height="32" />
+  <img src="./assets/stack/typescript.svg" alt="TypeScript" title="TypeScript" width="32" height="32" />
+  <img src="./assets/stack/python.svg" alt="Python" title="Python" width="32" height="32" />
+  <img src="./assets/stack/react.svg" alt="React" title="React" width="32" height="32" />
+  <img src="./assets/stack/fastapi.svg" alt="FastAPI" title="FastAPI" width="32" height="32" />
+  <img src="./assets/stack/postgresql.svg" alt="PostgreSQL" title="PostgreSQL" width="32" height="32" />
+  <img src="./assets/stack/mongodb.svg" alt="MongoDB" title="MongoDB" width="32" height="32" />
+  <img src="./assets/stack/cassandra.svg" alt="Cassandra" title="Cassandra" width="32" height="32" />
+  <img src="./assets/stack/supabase.svg" alt="Supabase" title="Supabase" width="32" height="32" />
+  <img src="./assets/stack/sqlalchemy.svg" alt="SQLAlchemy" title="SQLAlchemy" width="32" height="32" />
+  <img src="./assets/stack/docker.svg" alt="Docker" title="Docker" width="32" height="32" />
+  <img src="./assets/stack/git.svg" alt="Git" title="Git" width="32" height="32" />
+  <img src="./assets/stack/github.svg" alt="GitHub" title="GitHub" width="32" height="32" />
+</p>
 
 ### GitHub stats
 

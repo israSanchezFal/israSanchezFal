@@ -5,7 +5,7 @@ El perfil está en `README.md`: un halcón geométrico, presentación, About me,
 ## Diseño
 
 - `assets/falcon-minimal.png` es el banner actual: un halcón geométrico de estilo tech, sin detalles realistas y con espacio libre a su alrededor.
-- Las secciones de la referencia se presentan con títulos sencillos, texto breve y tecnologías en formato de código, sin insignias de colores ni ilustraciones adicionales.
+- Las secciones de la referencia se presentan con títulos sencillos y texto breve. El stack usa iconos oficiales de Devicon de 32 px, guardados en `assets/stack`, con el nombre de cada tecnología como texto alternativo y tooltip.
 - El usuario confirmó Docker, Java, TypeScript, Python, Git, GitHub, PostgreSQL, MongoDB, Cassandra, Supabase y React. Se añadieron FastAPI y SQLAlchemy, verificados en `proyecto_final_sql`.
 - Connect muestra iconos monocromáticos para GitHub, LinkedIn y correo. El correo público autorizado es `israsanchezf@icloud.com`. LinkedIn es un icono sin enlace, pendiente de que el usuario proporcione su URL.
 - Las estadísticas y la gráfica son SVG locales en tonos neutros, generados con datos reales de GitHub. No dependen de un servicio externo de imágenes.
@@ -27,7 +27,7 @@ Desde esta carpeta, revisa el cambio y publica únicamente los archivos del perf
 
 ```bash
 git diff -- README.md PROFILE_SETUP.md docs/visual-prompts.md
-git add README.md PROFILE_SETUP.md docs/visual-prompts.md assets/falcon-minimal.png assets/github-stats.svg assets/github-activity.svg assets/icons scripts/render_profile.py scripts/profile.graphql .github/workflows/profile-stats.yml
+git add README.md PROFILE_SETUP.md docs/visual-prompts.md assets/falcon-minimal.png assets/github-stats.svg assets/github-activity.svg assets/icons assets/stack scripts/render_profile.py scripts/profile.graphql .github/workflows/profile-stats.yml
 git commit -m "Simplify GitHub profile design"
 git push origin main
 ```
