@@ -15,9 +15,15 @@
 
 ### About me
 
-I'm a developer based in Mexico City, learning through hands-on projects in programming, databases, and APIs. My public work includes Java exercises and a traffic-data project built with Python and PostgreSQL.
+<img align="right" src="./assets/about-astronaut.png" alt="A monochrome pixel-art astronaut" width="170" />
 
-Currently exploring how to turn structured data into useful applications, one project at a time.
+**Israel, here** — a developer based in **Mexico City**, learning by turning ideas into working software.
+
+I work with **Java, Python, and TypeScript**, exploring how APIs, databases, and interfaces fit together. My stack includes **React, FastAPI, PostgreSQL, and Docker**.
+
+My public projects include Java exercises and a traffic-data application built with **Python and PostgreSQL**, covering data cleaning, database design, and an API with **FastAPI**.
+
+My goal is simple: write clear code, build useful software, and keep improving with every project.
 
 ### Connect
 
