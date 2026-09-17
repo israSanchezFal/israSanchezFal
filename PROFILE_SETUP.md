@@ -5,7 +5,7 @@ El perfil está en `README.md`: un halcón geométrico, presentación, About me,
 ## Diseño
 
 - `assets/falcon-minimal.png` es el banner actual: un halcón geométrico de estilo tech, sin detalles realistas y con espacio libre a su alrededor.
-- About me combina una biografía editable en inglés y `assets/about-astronaut.png`, una ilustración original de pixel art con fondo transparente, alineada a la derecha a 170 px. La descripción utiliza las tecnologías confirmadas y los proyectos públicos, sin atribuir estudios ni un cargo no confirmados.
+- About me contiene una biografía editable en inglés, sin ilustración lateral. La descripción utiliza las tecnologías confirmadas y los proyectos públicos, sin atribuir estudios ni un cargo no confirmados.
 - Las secciones de la referencia se presentan con títulos sencillos y texto breve. El stack usa iconos oficiales de Devicon de 32 px, guardados en `assets/stack`, con el nombre de cada tecnología como texto alternativo y tooltip.
 - El usuario confirmó Docker, Java, TypeScript, Python, Git, GitHub, PostgreSQL, MongoDB, Cassandra, Supabase y React. Se añadieron FastAPI y SQLAlchemy, verificados en `proyecto_final_sql`.
 - Connect muestra iconos monocromáticos para GitHub, LinkedIn y correo. El correo público autorizado es `israsanchezf@icloud.com`. LinkedIn es un icono sin enlace, pendiente de que el usuario proporcione su URL.
@@ -28,7 +28,7 @@ Desde esta carpeta, crea una rama, revisa el cambio y sube únicamente los archi
 ```bash
 git switch -c codex/profile-update
 git diff -- README.md PROFILE_SETUP.md docs/visual-prompts.md
-git add README.md PROFILE_SETUP.md docs/visual-prompts.md assets/falcon-minimal.png assets/about-astronaut.png assets/icons assets/stack
+git add README.md PROFILE_SETUP.md docs/visual-prompts.md assets/falcon-minimal.png assets/icons assets/stack
 git commit -m "Update GitHub profile"
 git push -u origin HEAD
 gh pr create --base main --title "Update GitHub profile" --body "Update the profile introduction and visual presentation."
