@@ -1,61 +1,50 @@
-# Cómo publicar este perfil
+# Perfil minimalista
 
-Todo lo necesario para la primera versión ya está en esta carpeta. El README usa el usuario público confirmado `israSanchezFal` y no publica tu correo académico.
+El perfil está en `README.md`: un halcón geométrico, presentación, About me, Connect, Tech stack, GitHub stats y Activity graph. El contenido conserva el inglés del perfil anterior.
 
-## 1. Revisa el contenido
+## Diseño
 
-Abre `README.md` y confirma que las frases generales sí te representan. No añadí tecnologías, puesto profesional, proyectos destacados ni redes sociales porque todavía no tenemos esos datos.
+- `assets/falcon-minimal.png` es el banner actual: un halcón geométrico de estilo tech, sin detalles realistas y con espacio libre a su alrededor.
+- Las secciones de la referencia se presentan con títulos sencillos, texto breve y tecnologías en formato de código, sin insignias de colores ni ilustraciones adicionales.
+- El usuario confirmó Docker, Java, TypeScript, Python, Git, GitHub, PostgreSQL, MongoDB, Cassandra, Supabase y React. Se añadieron FastAPI y SQLAlchemy, verificados en `proyecto_final_sql`.
+- Connect muestra iconos monocromáticos para GitHub, LinkedIn y correo. El correo público autorizado es `israsanchezf@icloud.com`. LinkedIn es un icono sin enlace, pendiente de que el usuario proporcione su URL.
+- Las estadísticas y la gráfica son SVG locales en tonos neutros, generados con datos reales de GitHub. No dependen de un servicio externo de imágenes.
+- La imagen es local y el texto usa el formato nativo de GitHub. El banner mantiene su fondo oscuro en ambos temas.
+- `assets/profile-banner.jpg` y `assets/avatar.jpg` se conservan como recursos anteriores. El avatar de la cuenta se administra por separado en GitHub.
+- El prompt del nuevo banner está documentado en `docs/visual-prompts.md`.
 
-## 2. Inicia sesión en GitHub CLI
+## Publicar una actualización
 
-La herramienta `gh` está instalada, pero no tiene una sesión activa:
+El remoto de esta carpeta apunta a `israSanchezFal/israSanchezFal`. El repositorio público con el mismo nombre que la cuenta es el que muestra el README en el perfil.
 
-```bash
-gh auth login
-```
-
-Elige GitHub.com, HTTPS y el inicio de sesión desde el navegador.
-
-## 3. Crea el repositorio especial del perfil
-
-GitHub solo mostrará este README en tu perfil si el repositorio es público y se llama exactamente igual que tu usuario: `israSanchezFal`.
-
-Desde esta carpeta, ejecuta:
+Si GitHub CLI necesita autenticación:
 
 ```bash
-git add README.md PROFILE_SETUP.md .gitignore docs assets
-git commit -m "feat: create GitHub profile"
-gh repo create israSanchezFal --public --source=. --remote=origin --push
+gh auth login -h github.com
 ```
 
-Si el repositorio `israSanchezFal/israSanchezFal` ya existe, no vuelvas a crearlo. Conecta esta carpeta y sube los archivos:
+Desde esta carpeta, revisa el cambio y publica únicamente los archivos del perfil:
 
 ```bash
-git remote add origin https://github.com/israSanchezFal/israSanchezFal.git
-git push -u origin main
+git diff -- README.md PROFILE_SETUP.md docs/visual-prompts.md
+git add README.md PROFILE_SETUP.md docs/visual-prompts.md assets/falcon-minimal.png assets/github-stats.svg assets/github-activity.svg assets/icons scripts/render_profile.py scripts/profile.graphql .github/workflows/profile-stats.yml
+git commit -m "Simplify GitHub profile design"
+git push origin main
 ```
 
-## 4. Completa la columna izquierda del perfil
+Los repositorios fijados y la gráfica de contribuciones nativa seguirán apareciendo en las secciones propias de GitHub.
 
-Esa parte no viene del README; se configura en GitHub con **Edit profile**.
+## Actualización de estadísticas
 
-- Sube `assets/avatar.jpg` como foto de perfil.
-- Mantén `Israel Sanchez Falcon` como nombre visible si así quieres presentarte.
-- Bio sugerida: `Developer in Mexico City — learning deeply, building thoughtfully, shipping consistently.`
-- Conserva `Mexico City` como ubicación.
-- Añade LinkedIn, portafolio o correo solo si quieres que sean públicos.
-- Fija tus dos mejores repositorios desde **Customize your pins**.
+`.github/workflows/profile-stats.yml` consulta la API GraphQL de GitHub y actualiza las dos tarjetas diariamente. También admite ejecución manual desde Actions. Utiliza el token automático del repositorio, sin secretos adicionales.
 
-## 5. Siguiente ronda de personalización
+Las tarjetas muestran contribuciones y días activos del último año, repositorios públicos propios (sin forks) y contribuciones por semana. El periodo consultado queda visible. Los extremos de la gráfica pueden representar semanas parciales. Si la consulta falla, se conservan las últimas imágenes válidas.
 
-Para convertir esta base en un perfil realmente tuyo, faltan cinco datos:
+Para regenerarlas manualmente desde la raíz del repositorio:
 
-1. Rol o especialidad.
-2. Tecnologías que utilizas de verdad.
-3. Dos a cuatro proyectos que quieras destacar.
-4. LinkedIn, portafolio o canal de contacto público.
-5. Si quieres el contenido final en inglés, español o bilingüe.
+```bash
+gh api graphql -f query="$(cat scripts/profile.graphql)" -f login=israSanchezFal > /tmp/isra-profile.json
+python3 scripts/render_profile.py /tmp/isra-profile.json
+```
 
-## Nota sobre las estadísticas
-
-La tarjeta de estadísticas usa GitHub Readme Stats, un servicio externo. Si en algún momento falla, el resto del perfil seguirá funcionando y la gráfica nativa de contribuciones de GitHub seguirá visible.
+La foto, bio lateral, logros y repositorios fijados son elementos de la cuenta de GitHub y no se cambian al publicar este README.

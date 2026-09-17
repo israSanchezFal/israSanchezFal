@@ -1,0 +1,18 @@
+query($login: String!) {
+  user(login: $login) {
+    repositories(privacy: PUBLIC, ownerAffiliations: OWNER, isFork: false) {
+      totalCount
+    }
+    contributionsCollection {
+      contributionCalendar {
+        totalContributions
+        weeks {
+          contributionDays {
+            date
+            contributionCount
+          }
+        }
+      }
+    }
+  }
+}
