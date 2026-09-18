@@ -1,25 +1,5 @@
 # Recurso visual del perfil
 
-## Ilustración de About me
-
-- Archivo: `assets/about-astronaut.png`.
-- Generado con la herramienta integrada `image_gen` como ilustración original de pixel art, con fondo transparente.
-- La referencia del usuario orientó el formato: texto editable a la izquierda e ilustración aparte a la derecha.
-- La ilustración no contiene la biografía; el texto se mantiene en el README para que pueda editarse y leerse con tecnologías de asistencia.
-
-### Prompt del astronauta
-
-```text
-Use case: stylized-concept
-Asset type: small original illustration placed beside the About me text in a minimal GitHub profile.
-Primary request: a restrained monochrome pixel-art astronaut, shown from the waist up in three-quarter view facing slightly left toward the text. Large simple opaque dark visor, a compact life-support backpack, simplified suit geometry. Quiet, thoughtful, exploratory mood.
-Style/medium: authentic low-resolution pixel art with clean hard square pixels, large readable shapes, very few details, about a 64-by-64-pixel design enlarged with nearest-neighbor style. No fine engraved texture and no realistic rendering.
-Composition/framing: square image, one astronaut occupying about 78% of the canvas with generous transparent margins. Complete helmet and backpack inside frame, deliberate flat cropped waist.
-Color palette: four neutral shades only: charcoal, medium gray, light gray, off-white. A dark outline and light silhouette edges should keep it legible on both white and dark webpage backgrounds.
-Background: genuinely transparent alpha; no colored backdrop, no checkerboard baked in.
-Constraints: no text, no letters, no flags, no badges, no logos, no stars, no planets, no floating particles, no motion trails, no glow, no gradients, no watermark. Original illustration, understated and legible at 170px wide.
-```
-
 ## Halcón minimalista de estilo tech
 
 - Archivo: `assets/falcon-minimal.png`.

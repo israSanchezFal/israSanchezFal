@@ -15,8 +15,6 @@
 
 ### About me
 
-<img align="right" src="./assets/about-astronaut.png" alt="A monochrome pixel-art astronaut" width="170" />
-
 **Israel, here** — a developer based in **Mexico City**, learning by turning ideas into working software.
 
 I work with **Java, Python, and TypeScript**, exploring how APIs, databases, and interfaces fit together. My stack includes **React, FastAPI, PostgreSQL, and Docker**.
